@@ -1,65 +1,167 @@
-import Image from "next/image";
+import Gallery from "./Gallery";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      {/* Navigation */}
+      <nav className="fixed left-0 top-0 z-50 w-full bg-black/40 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+          <h1 className="text-xl font-bold text-white md:text-2xl">
+            Swarn Bawa Photography
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+
+          <div className="hidden space-x-8 text-white md:block">
+            <a href="#home" className="transition hover:text-gray-300">
+              Home
+            </a>
+
+            <a href="#portfolio" className="transition hover:text-gray-300">
+              Portfolio
+            </a>
+
+            <a href="#about" className="transition hover:text-gray-300">
+              About
+            </a>
+
+            <a href="#contact" className="transition hover:text-gray-300">
+              Contact
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </nav>
+
+      {/* Hero */}
+      <main
+        id="home"
+        className="flex min-h-screen items-center justify-center bg-cover bg-center px-6"
+        style={{ backgroundImage: "url('/images/hero.jpg')" }}
+      >
+        <div className="rounded-2xl bg-black/55 px-8 py-12 text-center backdrop-blur-sm md:px-14">
+          <h2 className="text-5xl font-bold text-white md:text-7xl">
+            Swarn Bawa
+          </h2>
+
+          <p className="mt-3 text-xl uppercase tracking-[0.35em] text-white md:text-3xl">
+            Photography
+          </p>
+
+          <p className="mt-6 text-lg text-gray-200 md:text-xl">
+            Capturing the Beauty of the World
+          </p>
+
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#portfolio"
+            className="mt-8 inline-block rounded-full bg-white px-8 py-3 font-medium text-black transition hover:bg-gray-200"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            View Portfolio
           </a>
         </div>
       </main>
-    </div>
+
+      {/* Portfolio */}
+      <section
+        id="portfolio"
+        className="min-h-screen bg-black px-6 py-24 text-white md:px-10"
+      >
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-3 text-center text-sm uppercase tracking-[0.35em] text-gray-400">
+            Selected Collections
+          </p>
+
+          <h2 className="mb-16 text-center text-4xl font-bold md:text-5xl">
+            Portfolio
+          </h2>
+
+          <Gallery
+            title="Landscape"
+            folder="landscape"
+            images={[1, 2, 3, 4, 5, 6, 7]}
+          />
+
+          <Gallery
+            title="Architecture"
+            folder="Architecture"
+            images={[1, 2, 3, 5, 6, 7, 8, 9, 10]}
+          />
+        </div>
+      </section>
+
+      {/* About */}
+      <section
+        id="about"
+        className="flex min-h-screen items-center bg-gray-900 px-8 py-24 text-white"
+      >
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="mb-4 text-sm uppercase tracking-[0.35em] text-gray-400">
+            Behind the Camera
+          </p>
+
+          <h2 className="mb-8 text-4xl font-bold md:text-5xl">About Me</h2>
+
+          <p className="text-lg leading-9 text-gray-300 md:text-xl">
+            I’m Swarn Bawa, a photographer based in Abbotsford, British
+            Columbia, Canada. I began my photography journey in 1999 and have
+            spent more than two decades capturing the beauty of nature,
+            landscapes, architecture, people, and everyday life. Through my
+            photography, I aim to preserve meaningful moments and share the
+            beauty of the world through my lens.
+          </p>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section
+        id="contact"
+        className="flex min-h-screen items-center bg-black px-8 py-24 text-white"
+      >
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="mb-4 text-sm uppercase tracking-[0.35em] text-gray-400">
+            Get in Touch
+          </p>
+
+          <h2 className="mb-8 text-4xl font-bold md:text-5xl">Contact</h2>
+
+          <p className="mb-10 text-lg leading-8 text-gray-300">
+            For photography inquiries, collaborations, prints, or project
+            information, please contact me by email or Instagram.
+          </p>
+
+          <div className="space-y-5 text-lg">
+            <p>
+              <strong>Email:</strong>{" "}
+              <a
+                href="mailto:abbyfilms78@gmail.com"
+                className="text-gray-300 transition hover:text-white"
+              >
+                abbyfilms78@gmail.com
+              </a>
+            </p>
+
+            <p>
+              <strong>Instagram:</strong>{" "}
+              <a
+                href="https://www.instagram.com/sbawa78"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 transition hover:text-white"
+              >
+                @sbawa78
+              </a>
+            </p>
+
+            <p>
+              <strong>Location:</strong>{" "}
+              <span className="text-gray-300">
+                Abbotsford, British Columbia, Canada
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-black px-6 py-8 text-center text-sm text-gray-500">
+        © 2026 Swarn Bawa Photography. All rights reserved.
+      </footer>
+    </>
   );
 }
