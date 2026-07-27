@@ -105,10 +105,10 @@ export default function Home() {
           </h2>
 
           <Gallery
-            title="Landscape"
-            folder="landscape"
-            images={[1, 2, 3, 4, 5, 6, 7]}
-          />
+  title="Landscape"
+  folder="landscape"
+  images={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]}
+/>
 
           <Gallery
             title="Portrait"
