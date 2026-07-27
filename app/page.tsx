@@ -37,13 +37,21 @@ export default function Home() {
   className="relative min-h-screen overflow-hidden"
 >
   {/* Background Image */}
+<div className="absolute inset-0 overflow-hidden">
   <div
-    className="absolute inset-0 bg-cover bg-center"
+    className="hero-cinematic absolute inset-0 bg-cover bg-[position:62%_center] md:bg-center"
     style={{ backgroundImage: "url('/images/hero/4.jpg')" }}
   />
+</div>
 
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/30" />
+  {/* Cinematic Overlay */}
+<div
+  className="absolute inset-0"
+  style={{
+    background:
+      "linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.45), rgba(0,0,0,0.72))",
+  }}
+/>
 
   {/* Hero Content */}
   <div className="relative z-10 flex min-h-screen w-full flex-col items-center px-6 pt-20 text-center md:ml-0 md:items-start md:justify-center md:px-0 md:pt-0 md:text-left">
@@ -74,18 +82,18 @@ export default function Home() {
       width={700}
       height={260}
       priority
-      className="mt-7 h-auto w-[280px] md:relative md:left-20 md:top-[-240px] md:mt-0 md:w-[700px]"
+      className="hero-logo mt-7 h-auto w-[280px] md:relative md:left-20 md:top-[-240px] md:mt-0 md:w-[700px]"
     />
 
     {/* Caption */}
-<p  className="mt-00 -translate-y-15 text-base text-gray-200 md:ml-75 md:-mt-90 md:text-lg">
+<p className="hero-tagline mt-00 -translate-y-15 text-base text-gray-200 md:ml-75 md:-mt-90 md:text-lg">
   Capturing the Beauty of the World
 </p>
 
     {/* Portfolio Button */}
     <a
       href="#portfolio"
-      className="mt-7 inline-block rounded-full border border-white px-6 py-3 text-white transition hover:bg-white hover:text-black md:ml-85 md:mt-20 md:px-8"
+      className="hero-button mt-7 inline-block rounded-full border border-white/80 px-6 py-3 text-white transition-all duration-500 ease-out hover:-translate-y-1 hover:border-white hover:bg-white hover:text-black hover:shadow-[0_10px_30px_rgba(255,255,255,0.18)] md:ml-85 md:mt-20 md:px-8"
     >
       View Portfolio
     </a>

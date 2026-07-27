@@ -34,4 +34,82 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}@keyframes heroCinematic {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.035);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
+
+.hero-cinematic {
+  animation: heroCinematic 24s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cinematic {
+    animation: none;
+  }
+}@keyframes heroContentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+filter: blur(3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.hero-logo,
+.hero-tagline,
+.hero-button {
+  opacity: 0;
+  animation-name: heroContentReveal;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-fill-mode: forwards;
+}
+
+.hero-logo {
+  animation-duration: 3.2s;
+  animation-delay: 0.4s;
+}
+
+.hero-tagline {
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+
+.hero-button {
+  animation-duration: 1.6s;
+  animation-delay: 1.8s;
+}
+
+.hero-tagline {
+  animation-delay: 1.0s;
+}
+
+.hero-button {
+  animation-delay: 1.8s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo,
+  .hero-tagline,
+  .hero-button {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+

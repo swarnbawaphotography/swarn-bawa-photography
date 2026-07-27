@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 type GalleryProps = {
   title: string;
@@ -66,11 +67,24 @@ export default function Gallery({
 
         <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
           {images.map((number, index) => (
-            <button
+            <motion.button
               key={number}
               type="button"
               onClick={() => setSelectedIndex(index)}
-              className="mb-5 block w-full break-inside-avoid overflow-hidden rounded-2xl"
+              className="gallery-item mb-5 block w-full break-inside-avoid overflow-hidden rounded-2xl transition-all duration-700 ease-out hover:-translate-y-1 hover:shadow-2xl"
+
+              initial={{ opacity: 0, y: 30 }}
+
+whileInView={{ opacity: 1, y: 0 }}
+
+viewport={{ once: true, amount: 0.45 }}
+
+transition={{
+  duration: 3.8,
+  delay: index * 0.22,
+  ease: [0.16, 1, 0.3, 1],
+}}
+
               aria-label={`Open ${title} photograph ${number}`}
             >
               <img
@@ -78,7 +92,7 @@ export default function Gallery({
                 alt={`${title} photograph ${number}`}
                 className="h-auto w-full rounded-xl cursor-zoom-in transition duration-500 hover:scale-105"
               />
-            </button>
+            </motion.button>
           ))}
         </div>
       </div>
