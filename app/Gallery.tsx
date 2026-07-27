@@ -62,9 +62,7 @@ export default function Gallery({
   return (
     <>
       <div className="mb-24">
-        <h3 className="mb-8 text-2xl font-bold md:text-3xl">
-  {title}
-</h3>
+        {/* Category title moved to the banner */}
 
         <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
           {images.map((number, index) => (

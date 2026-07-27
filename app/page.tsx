@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import Gallery from "./Gallery";
 import Reveal from "./components/Reveal";
 import HeroSlideshow from "./HeroSlideshow";
+import CategoryBanner from "./components/CategoryBanner";
 
 export default function Home() {
   return (
@@ -96,19 +98,19 @@ export default function Home() {
         className="min-h-screen bg-black px-6 py-4 text-white md:px-10"
       >
         <div className="mx-auto max-w-7xl">
-          <p className="mb-3 text-center text-sm uppercase tracking-[0.35em] text-gray-400">
-            Selected Collections
-          </p>
+          <div className="mb-16 mt-16 text-center">
+  <p className="text-sm uppercase tracking-[0.65em] text-gray-400">
+    Selected Collections
+  </p>
+</div>
 
-          <h2 className="mb-16 text-center text-4xl font-bold md:text-5xl">
-            Portfolio
-          </h2>
-
-          <Gallery
-  title="Landscape"
-  folder="landscape"
-  images={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]}
-/>
+          <Link href="/landscape" className="block">
+  <CategoryBanner
+    title="LANDSCAPE"
+    subtitle="Exploring Nature Through the Lens"
+    image="/images/landscape/5.jpg"
+  />
+</Link>
 
           <Gallery
             title="Portrait"
