@@ -24,9 +24,9 @@ export default function LandscapePage() {
   </div>
 
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-light tracking-[0.35em] md:text-6xl">
-            LANDSCAPE
-          </h1>
+          <h1 className="px-4 text-center text-3xl font-light tracking-[0.22em] text-white sm:text-4xl md:px-0 md:text-6xl md:tracking-[0.35em]">
+  LANDSCAPE
+</h1>
 
           <div className="mx-auto mt-6 h-px w-32 bg-white/70" />
 
