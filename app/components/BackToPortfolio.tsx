@@ -12,7 +12,7 @@ export default function BackToPortfolio() {
 
     setIsLeaving(true);
 
-    const page = document.getElementById("landscape-page");
+   const page = document.querySelector("main");
 
     if (page) {
       page.style.transition = "opacity 0.8s ease-out";
@@ -20,7 +20,7 @@ export default function BackToPortfolio() {
     }
 
     setTimeout(() => {
-      router.push("/#portfolio");
+      router.back();
     }, 800);
   }
 

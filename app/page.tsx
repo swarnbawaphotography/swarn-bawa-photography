@@ -4,9 +4,13 @@ import Gallery from "./Gallery";
 import Reveal from "./components/Reveal";
 import HeroSlideshow from "./HeroSlideshow";
 import CategoryBanner from "./components/CategoryBanner";
+import PageTransition from "./components/PageTransition";
+import IntroLoader from "./components/IntroLoader";
 
 export default function Home() {
   return (
+  <PageTransition>
+    <IntroLoader />
     <>
       {/* Desktop Navigation */}
 <nav className="fixed left-0 top-0 z-50 hidden w-full bg-black/30 backdrop-blur-md md:block">
@@ -120,17 +124,23 @@ export default function Home() {
   />
 </Link>
 
-          <Gallery
-            title="Portrait"
-            folder="portrait"
-            images={[1, 2, 3, 4]}
-          />
+          <Link href="/portrait" className="block">
+  <CategoryBanner
+    title="PORTRAITS"
+    subtitle="Capturing Genuine Moments"
+    image="/images/portrait/1.jpg"
+  />
+</Link>
 
-          <Gallery
-            title="Architecture"
-            folder="Architecture"
-            images={[1, 2, 3, 5, 6, 7, 8, 9, 10]}
-          />
+
+
+          <Link href="/architecture">
+  <CategoryBanner
+    title="ARCHITECTURE"
+    subtitle="Lines, Light and Design"
+    image="/images/banner/architecture-banner.jpg"
+  />
+</Link>
         </div>
       </section>
 
@@ -204,6 +214,7 @@ export default function Home() {
       <footer className="bg-black py-8 text-center text-sm text-gray-500">
         © 2026 Swarn Bawa Photography. All rights reserved.
       </footer>
-    </>
+        </>
+  </PageTransition>
   );
 }

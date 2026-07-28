@@ -111,5 +111,23 @@ filter: blur(3px);
     animation: none;
   }
 }
+html,
+body {
+  background: #000;
+}
+/* Cinematic Banner Animation */
 
+@keyframes bannerZoom {
+  0% {
+    transform: translateY(2rem) scale(1.05);
+  }
 
+  100% {
+    transform: translateY(2rem) scale(1.10);
+  }
+}
+
+.animate-bannerZoom {
+  animation: bannerZoom 10s ease-in-out infinite alternate;
+  will-change: transform;
+}
