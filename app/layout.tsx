@@ -14,18 +14,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Swarn Bawa Photography | Abbotsford, BC",
+  title: "Swarn Bawa Photography | Landscape, Portrait & Architecture Photographer | Abbotsford BC",
   description:
-    "Photography portfolio of Swarn Bawa, based in Abbotsford, British Columbia. Featuring landscapes, architecture, portraits, and visual storytelling.",
+  "Professional landscape, portrait and architecture photography by Swarn Bawa in Abbotsford, British Columbia. Capturing timeless images since 1999.",
   keywords: [
-    "Swarn Bawa Photography",
-    "Abbotsford photographer",
-    "British Columbia photographer",
-    "landscape photography",
-    "architecture photography",
-    "portrait photography",
-    "Canada photographer",
-  ],
+  "Abbotsford photographer",
+  "British Columbia photographer",
+  "Landscape photographer",
+  "Portrait photographer",
+  "Architecture photographer",
+  "Fine art photography",
+  "Fraser Valley photographer",
+  "Canadian photographer",
+  "Swarn Bawa Photography",
+],
   authors: [{ name: "Swarn Bawa" }],
   creator: "Swarn Bawa",
   openGraph: {
@@ -66,6 +68,36 @@ export default function RootLayout({
       gtag('config', 'G-01DHV05GH1');
     `}
   </Script>
+  <Script
+  id="local-business-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      name: "Swarn Bawa Photography",
+      image: "https://swarnbawaphotography.com/images/hero/hero.jpg",
+      url: "https://swarnbawaphotography.com",
+      email: "mailto:abbyfilms78@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Abbotsford",
+        addressRegion: "British Columbia",
+        addressCountry: "CA",
+      },
+      sameAs: [
+        "https://www.instagram.com/sbawa78",
+      ],
+      areaServed: [
+        "Abbotsford",
+        "Fraser Valley",
+        "British Columbia",
+      ],
+      description:
+        "Professional landscape, portrait and architecture photography by Swarn Bawa.",
+    }),
+  }}
+/>
 </body>
     </html>
   );
