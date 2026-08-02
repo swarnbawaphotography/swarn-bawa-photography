@@ -157,7 +157,7 @@ export default function Home() {
         <img
           src="/images/about/swarn-bawa.jpg"
           alt="Swarn Bawa"
-         className="h-[650px] w-[520px] object-cover object-center rounded-2xl"
+         className="h-[650px] w-[520px] rounded-2xl object-cover object-[55%_20%]"
         />
       </div>
 
