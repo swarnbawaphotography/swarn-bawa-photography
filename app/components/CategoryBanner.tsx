@@ -22,7 +22,7 @@ export default function CategoryBanner({
   <div className="relative flex h-full items-center justify-center translate-y-24 text-center">
     <div>
       <h2
-  className="text-5xl font-extralight tracking-[0.35em] text-white sm:text-6xl md:text-7xl"
+  className="w-full whitespace-nowrap px-3 text-center text-[clamp(1.7rem,8vw,4.5rem)] font-extralight uppercase tracking-[0.16em] text-white sm:text-6xl sm:tracking-[0.25em] md:text-7xl md:tracking-[0.35em]"
   style={{
     textShadow:
       "0 2px 3px rgba(0,0,0,0.85), 0 6px 14px rgba(0,0,0,0.55)",
@@ -31,7 +31,7 @@ export default function CategoryBanner({
   {title}
 </h2>
 
-      <p className="mt-6 px-6 text-lg font-light tracking-[0.18em] text-gray-200 md:px-0 md:text-xl">
+      <p className="mt-6 px-4 text-center text-sm font-light tracking-[0.08em] text-gray-200 sm:text-base sm:tracking-[0.12em] md:px-0 md:text-xl md:tracking-[0.18em]">
         {subtitle}
       </p>
     </div>

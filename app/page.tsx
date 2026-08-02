@@ -52,8 +52,7 @@ export default function Home() {
 <div
   className="absolute inset-0"
   style={{
-    background:
-      "linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.45), rgba(0,0,0,0.72))",
+    background: "linear-gradient(to bottom, rgba(0,0,0,0.08), rgba(0,0,0,0.35), rgba(0,0,0,0.63))",
   }}
 />
 
@@ -149,67 +148,94 @@ export default function Home() {
 
           {/* About */}
           <Reveal>
-<section
-  id="about"
-  className="bg-black px-8 py-24 text-center text-white"
->
-  <div className="mx-auto max-w-4xl">
-    <h2 className="mb-8 text-4xl font-light">About</h2>
+  <section
+    id="about"
+    className="flex min-h-screen items-center justify-center bg-black px-6 py-24 text-white md:px-10"
+  >
+    <div className="mx-auto grid w-full max-w-6xl items-center gap-16 md:grid-cols-2">
+      <div className="overflow-hidden rounded-2xl">
+        <img
+          src="/images/about/swarn-bawa.jpg"
+          alt="Swarn Bawa"
+         className="h-[650px] w-[520px] object-cover object-center rounded-2xl"
+        />
+      </div>
 
-    <p className="mx-auto max-w-3xl text-lg leading-8 text-gray-300">
-      Photography has been my passion for over two decades.
-      <br />
-      <br />
-      My work spans landscapes, portraits, and weddings, each reflecting a
-      deep appreciation for natural light, authentic emotion, and thoughtful
-      composition. Every photograph is created with the intention of telling a
-      meaningful story and preserving moments that stand the test of time.
-      <br />
-      <br />
-      Whether capturing the beauty of nature, the character of a portrait, or
-      the joy of a wedding celebration, my goal is to create timeless images
-      that will be treasured for years to come.
-    </p>
-  </div>
-</section>
+      <div className="flex flex-col items-center md:items-start">
+ <h2 className="mb-6 w-full text-center text-5xl font-light">
+  About
+</h2>
+  
+
+        <p className="mb-6 w-full text-center text-lg text-yellow-400">
+          Landscape • Portrait • Wedding Photographer
+        </p>
+
+        <p className="mb-8 w-full text-center text-gray-400">
+          Based in Abbotsford, British Columbia, Canada
+        </p>
+        <div className="mb-10 flex w-full justify-center md:justify-center">
+  <div className="h-px w-28 bg-yellow-400"></div>
+</div>
+
+        <p className="max-w-xl text-left text-lg leading-8 text-gray-300">
+          Photography has been my passion since 1999.
+          <br />
+          <br />
+          My work spans landscapes, portraits, and weddings, each reflecting a
+          deep appreciation for natural light, authentic emotion, and thoughtful
+          composition. Every photograph is created with the intention of telling
+          a meaningful story and preserving moments that stand the test of time.
+          <br />
+          <br />
+          Whether capturing the beauty of nature, the character of a portrait,
+          or the joy of a wedding celebration, my goal is to create timeless
+          images that will be treasured for years to come.
+        </p>
+      </div>
+    </div>
+  </section>
 </Reveal>
      
 
       {/* Contact */}
-      <Reveal>
       <section
   id="contact"
-  className="bg-black px-8 py-24 text-center text-white"
+  className="flex min-h-screen items-center justify-center text-white"
 >
-  <h2 className="mb-8 text-4xl font-light">Contact</h2>
+  <div className="w-full max-w-2xl text-center opacity-100">
+    <h2 className="mb-8 text-4xl font-light text-white">
+      Contact
+    </h2>
 
-  <p className="mb-4 text-lg">
-    I'd love to hear from you.
-  </p>
+    <p className="mb-6 text-lg text-white">
+      I'd love to hear from you.
+    </p>
 
-  <p>
-  <strong>Email:</strong>{" "}
-  <a
-    href="mailto:abbyfilms78@gmail.com"
-    className="transition hover:text-gray-300"
-  >
-    abbyfilms78@gmail.com
-  </a>
-</p>
+    <p className="text-white">
+      <strong className="text-[#d4af37]">Email:</strong>{" "}
+      <a
+        href="mailto:abbyfilms78@gmail.com"
+        className="text-white transition hover:text-gray-300"
+      >
+        abbyfilms78@gmail.com
+      </a>
+    </p>
 
-  <p>
-    <strong>Instagram:</strong>{" "}
-    <a
-      href="https://www.instagram.com/sbawa78"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-gray-300 hover:text-white"
-    >
-      @sbawa78
-    </a>
-  </p>
+    <p className="mt-2 text-white">
+      <strong className="text-[#d4af37]">Instagram:</strong>{" "}
+      <a
+        href="https://www.instagram.com/sbawa78"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white transition hover:text-gray-300"
+      >
+        @sbawa78
+      </a>
+    </p>
+  </div>
 </section>
-</Reveal>
+
 
       <footer className="bg-black py-8 text-center text-sm text-gray-500">
         © 2026 Swarn Bawa Photography. All rights reserved.
