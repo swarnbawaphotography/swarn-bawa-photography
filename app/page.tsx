@@ -6,6 +6,7 @@ import HeroSlideshow from "./HeroSlideshow";
 import CategoryBanner from "./components/CategoryBanner";
 import PageTransition from "./components/PageTransition";
 import IntroLoader from "./components/IntroLoader";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   return (
@@ -201,38 +202,46 @@ export default function Home() {
       {/* Contact */}
       <section
   id="contact"
-  className="flex min-h-screen items-center justify-center text-white"
+  className="flex min-h-screen items-center justify-center bg-black px-6 py-28 text-white md:px-10"
 >
-  <div className="w-full max-w-2xl text-center opacity-100">
-    <h2 className="mb-8 text-4xl font-light text-white">
+  <div className="w-full max-w-3xl text-center">
+    <h2 className="mb-4 text-4xl font-light md:text-5xl">
       Contact
     </h2>
 
-    <p className="mb-6 text-lg text-white">
-      I'd love to hear from you.
+    <p className="mb-10 text-gray-300">
+      I’d love to hear from you.
     </p>
 
-    <p className="text-white">
-      <strong className="text-[#d4af37]">Email:</strong>{" "}
-      <a
-        href="mailto:abbyfilms78@gmail.com"
-        className="text-white transition hover:text-gray-300"
-      >
-        abbyfilms78@gmail.com
-      </a>
-    </p>
+    <ContactForm />
 
-    <p className="mt-2 text-white">
-      <strong className="text-[#d4af37]">Instagram:</strong>{" "}
-      <a
-        href="https://www.instagram.com/sbawa78"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-white transition hover:text-gray-300"
-      >
-        @sbawa78
-      </a>
-    </p>
+    <div className="mt-12 space-y-2 text-sm">
+      <p>
+        <strong className="font-semibold text-yellow-400">
+          Email:
+        </strong>{" "}
+        <a
+          href="mailto:abbyfilms78@gmail.com"
+          className="transition hover:text-yellow-400"
+        >
+          abbyfilms78@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <strong className="font-semibold text-yellow-400">
+          Instagram:
+        </strong>{" "}
+        <a
+          href="https://www.instagram.com/sbawa78"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition hover:text-yellow-400"
+        >
+          @sbawa78
+        </a>
+      </p>
+    </div>
   </div>
 </section>
 
