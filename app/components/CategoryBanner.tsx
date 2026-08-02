@@ -22,7 +22,11 @@ export default function CategoryBanner({
   <div className="relative flex h-full items-center justify-center translate-y-24 text-center">
     <div>
       <h2
-  className="w-full whitespace-nowrap px-3 text-center text-[clamp(1.7rem,8vw,4.5rem)] font-extralight uppercase tracking-[0.16em] text-white sm:text-6xl sm:tracking-[0.25em] md:text-7xl md:tracking-[0.35em]"
+  className={`w-full whitespace-nowrap px-4 text-center font-light ${
+  title === "ARCHITECTURE"
+    ? "text-[clamp(1.6rem,7vw,4.5rem)] tracking-[0.12em] md:text-[clamp(3rem,6vw,5rem)] md:tracking-[0.35em]"
+    : "text-[clamp(1.7rem,8vw,4.5rem)] tracking-[0.25em] md:tracking-[0.35em]"
+}`}
   style={{
     textShadow:
       "0 2px 3px rgba(0,0,0,0.85), 0 6px 14px rgba(0,0,0,0.55)",
