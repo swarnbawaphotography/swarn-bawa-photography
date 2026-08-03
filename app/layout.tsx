@@ -40,13 +40,13 @@ export const metadata: Metadata = {
   locale: "en_CA",
   type: "website",
   images: [
-    {
-      url: "https://www.swarnbawaphotography.com/opengraph-image.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Autumn landscape photography by Swarn Bawa",
-    },
-  ],
+  {
+    url: "https://www.swarnbawaphotography.com/social-preview.jpg",
+    width: 1200,
+    height: 630,
+    alt: "Marina landscape photography by Swarn Bawa",
+  },
+],
 },
 twitter: {
   card: "summary_large_image",
@@ -54,7 +54,7 @@ twitter: {
   description:
     "Landscape, portrait and architecture photography by Swarn Bawa in Abbotsford, British Columbia.",
   images: [
-  "https://www.swarnbawaphotography.com/opengraph-image.jpg",
+  "https://www.swarnbawaphotography.com/social-preview.jpg",
 ],
 },
 };
