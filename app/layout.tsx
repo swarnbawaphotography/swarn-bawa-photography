@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://swarnbawaphotography.com"),
   title: "Swarn Bawa Photography | Landscape, Portrait & Architecture Photographer | Abbotsford BC",
   description:
   "Professional landscape, portrait and architecture photography by Swarn Bawa in Abbotsford, British Columbia. Capturing timeless images since 1999.",
@@ -31,15 +32,30 @@ export const metadata: Metadata = {
   authors: [{ name: "Swarn Bawa" }],
   creator: "Swarn Bawa",
   openGraph: {
-    title: "Swarn Bawa Photography",
-    description:
-      "Explore the photography portfolio of Swarn Bawa, based in Abbotsford, British Columbia.",
-    type: "website",
-    locale: "en_CA",
-    siteName: "Swarn Bawa Photography",
-  },
+  title: "Swarn Bawa Photography",
+  description:
+    "Landscape, portrait and architecture photography by Swarn Bawa in Abbotsford, British Columbia.",
+  url: "https://swarnbawaphotography.com",
+  siteName: "Swarn Bawa Photography",
+  locale: "en_CA",
+  type: "website",
+  images: [
+    {
+      url: "/opengraph-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Autumn landscape photography by Swarn Bawa",
+    },
+  ],
+},
+twitter: {
+  card: "summary_large_image",
+  title: "Swarn Bawa Photography",
+  description:
+    "Landscape, portrait and architecture photography by Swarn Bawa in Abbotsford, British Columbia.",
+  images: ["/opengraph-image.jpg"],
+},
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
