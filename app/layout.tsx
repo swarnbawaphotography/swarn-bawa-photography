@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   type: "website",
   images: [
   {
-    url: "https://www.swarnbawaphotography.com/social-preview.jpg",
+    url: "https://www.swarnbawaphotography.com/social-preview-marina.jpg",
     width: 1200,
     height: 630,
     alt: "Marina landscape photography by Swarn Bawa",
@@ -54,7 +54,7 @@ twitter: {
   description:
     "Landscape, portrait and architecture photography by Swarn Bawa in Abbotsford, British Columbia.",
   images: [
-  "https://www.swarnbawaphotography.com/social-preview.jpg",
+  "https://www.swarnbawaphotography.com/social-preview-marina.jpg",
 ],
 },
 };
