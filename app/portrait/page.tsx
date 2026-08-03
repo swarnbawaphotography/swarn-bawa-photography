@@ -43,7 +43,7 @@ export default function PortraitPage() {
         <Gallery
           title=""
           folder="portrait"
-          images={[1, 2, 3, 4]}
+          images={[1, 2, 3, 4, 5]}
         />
       </div>
         </main>
