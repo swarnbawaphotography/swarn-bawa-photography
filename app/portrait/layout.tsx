@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portrait Photography | Swarn Bawa | Abbotsford BC",
+  title: "Portrait Photography | Swarn Bawa Photography",
   description:
     "Explore portrait photography by Swarn Bawa in Abbotsford, British Columbia, featuring natural light, authentic expression and timeless images.",
   alternates: {
