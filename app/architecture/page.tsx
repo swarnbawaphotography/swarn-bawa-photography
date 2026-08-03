@@ -1,13 +1,15 @@
 "use client";
+
 import { useEffect } from "react";
 import PageTransition from "../components/PageTransition";
 import BackToPortfolio from "../components/BackToPortfolio";
 import Gallery from "../Gallery";
 
 export default function ArchitecturePage() {
-    useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <PageTransition>
       <main
@@ -40,7 +42,7 @@ export default function ArchitecturePage() {
           <Gallery
             title=""
             folder="Architecture"
-            images={[1, 2, 3, 5, 6, 7, 8, 9, 10]}
+            images={[1, 2, 3, 5, 6, 7, 8, 9, 10, 11]}
           />
         </div>
       </main>
