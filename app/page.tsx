@@ -153,14 +153,14 @@ export default function Home() {
     id="about"
     className="flex min-h-screen items-center justify-center bg-black px-6 py-32 text-white md:px-10"
   >
-    <div className="mx-auto grid w-full max-w-6xl grid-cols-[160px_1fr] items-start gap-7 md:grid-cols-2 md:items-center md:gap-16">
-      <div className="overflow-hidden rounded-2xl">
-        <img
-          src="/images/about/swarn-bawa.jpg"
-          alt="Swarn Bawa"
-          className="h-[280px] w-[170px] rounded-2xl object-cover object-[55%,20%] md:h-[650px] md:w-[520px]"
-        />
-      </div>
+    <div className="mx-auto grid w-full max-w-6xl grid-cols-[170px_1fr] items-start gap-5 md:grid-cols-2 md:items-center md:gap-16">
+      <div className="mt-69 relative left-5 flex justify-center overflow-hidden rounded-2xl md:left-0">
+  <img
+    src="/images/about/swarn-bawa.jpg"
+    alt="Swarn Bawa"
+    className="h-[220px] w-[140px] rounded-2xl object-cover object-[55%,20%] md:h-[650px] md:w-[520px]"
+  />
+</div>
 
       <div className="flex flex-col items-center md:items-start">
         <h2 className="mb-6 w-full text-center text-3xl font-light md:text-5xl">
@@ -178,7 +178,7 @@ export default function Home() {
         <div className="mb-10 flex w-full justify-center">
           <div className="h-px w-28 bg-yellow-400" />
         </div>
-
+        <div className="mt-8 flex items-start gap-2">
         <p className="max-w-[220px] text-left text-sm leading-6 text-gray-200 md:max-w-xl md:text-lg md:leading-8">
           Photography has been my passion since 1999.
           <br />
@@ -194,6 +194,7 @@ export default function Home() {
           images that will be treasured for years to come.
         </p>
       </div>
+    </div>
     </div>
   </section>
 </Reveal>
