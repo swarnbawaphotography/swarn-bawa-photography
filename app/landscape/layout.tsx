@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     canonical: "https://swarnbawaphotography.com/landscape",
   },
   openGraph: {
-    title: "Landscape Photography | Swarn Bawa",
+    title: "Landscape Photography | Swarn Bawa Photography",
     description:
       "A collection of landscape photography featuring nature, light and scenery by Swarn Bawa.",
     url: "https://swarnbawaphotography.com/landscape",
