@@ -154,7 +154,7 @@ export default function Home() {
     className="flex min-h-screen items-center justify-center bg-black px-6 py-32 text-white md:px-10"
   >
     <div className="mx-auto grid w-full max-w-6xl grid-cols-[170px_1fr] items-start gap-5 md:grid-cols-2 md:items-center md:gap-16">
-      <div className="mt-69 relative left-5 flex justify-center overflow-hidden rounded-2xl md:left-0">
+      <div className="relative left-3 mt-[276px] flex justify-center overflow-hidden rounded-2xl md:left-0 md:mt-0">
   <img
     src="/images/about/swarn-bawa.jpg"
     alt="Swarn Bawa"
