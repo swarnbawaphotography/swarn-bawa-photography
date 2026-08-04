@@ -84,7 +84,7 @@ export default function Gallery({
 >
   <img
     src={`/images/${folder}/${number}.jpg`}
-    alt={`${title} photograph ${number}`}
+   alt={`${title} photography by Swarn Bawa - Image ${number}`}
     className="h-auto w-full cursor-zoom-in rounded-xl transition-all duration-1000 ease-out group-hover:scale-110 group-hover:brightness-75"
   />
 </motion.button>
@@ -129,25 +129,38 @@ export default function Gallery({
       <motion.img
         key={images[selectedIndex]}
         src={`/images/${folder}/${images[selectedIndex]}.jpg`}
-        alt={`${title} photograph ${images[selectedIndex]}`}
+        alt={`${title} photography by Swarn Bawa - Image ${images[selectedIndex]}`}
         onClick={(event) => event.stopPropagation()}
         className="max-h-[94vh] max-w-[95vw] rounded-lg object-contain"
         initial={{
-          opacity: 0,
-          scale: 0.94,
-        }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-        }}
-        exit={{
-          opacity: 0,
-          scale: 0.96,
-        }}
-        transition={{
-          duration: 0.8,
-          ease: [0.22, 1, 0.36, 1],
-        }}
+  opacity: 0,
+  scale: 1,
+}}
+
+animate={{
+  opacity: 1,
+  scale: [1, 1.04, 1],
+}}
+
+exit={{
+  opacity: 0,
+  scale: 0.98,
+  transition: {
+    duration: 0.35,
+    ease: [0.22, 1, 0.36, 1],
+  },
+}}
+
+transition={{
+  opacity: {
+    duration: 0.6,
+  },
+  scale: {
+    duration: 10,
+    repeat: 0,
+    ease: "easeInOut",
+  },
+}}
       />
 
       <button

@@ -12,16 +12,19 @@ export default function BackToPortfolio() {
 
     setIsLeaving(true);
 
-   const page = document.querySelector("main");
+   const page =
+  document.getElementById("landscape-page") ||
+  document.getElementById("portrait-page") ||
+  document.getElementById("architecture-page");
 
-    if (page) {
-      page.style.transition = "opacity 0.8s ease-out";
-      page.style.opacity = "0";
-    }
+if (page) {
+  page.style.transition = "opacity 0.8s ease-out";
+  page.style.opacity = "0";
+}
 
-    setTimeout(() => {
-      router.back();
-    }, 800);
+setTimeout(() => {
+  router.back();
+}, 800);
   }
 
   return (

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import GalleryLink from "./components/GalleryLink";
 import Gallery from "./Gallery";
 import Reveal from "./components/Reveal";
 import HeroSlideshow from "./HeroSlideshow";
@@ -104,6 +104,7 @@ export default function Home() {
   </div>
 </main>
 
+
       {/* Portfolio */}
       <section
         id="portfolio"
@@ -116,31 +117,31 @@ export default function Home() {
   </p>
 </div>
 
-          <Link href="/landscape" className="block">
+          <GalleryLink href="/landscape" className="block">
   <CategoryBanner
     title="LANDSCAPE"
     subtitle="Exploring Nature Through the Lens"
     image="/images/landscape/5.jpg"
   />
-</Link>
+</GalleryLink>
 
-          <Link href="/portrait" className="block">
+          <GalleryLink href="/portrait" className="block">
   <CategoryBanner
     title="PORTRAITS"
     subtitle="Capturing Genuine Moments"
     image="/images/portrait/1.jpg"
   />
-</Link>
+</GalleryLink>
 
 
 
-          <Link href="/architecture">
+          <GalleryLink href="/architecture">
   <CategoryBanner
     title="ARCHITECTURE"
     subtitle="Lines, Light and Design"
     image="/images/banner/architecture-banner.jpg"
   />
-</Link>
+</GalleryLink>
         </div>
       </section>
 
